@@ -1,0 +1,28 @@
+@import "../theme";
+@import "../mixins";
+.nav.nav-pills, .nav.nav-tabs
+{
+    padding-right: 0;
+}
+.nav.nav-pills .nav-link, .nav.nav-tabs .nav-link
+{
+    color: #000;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    font-weight: 500 !important;
+    &:hover 
+    {
+        border: 0;
+        border-bottom: 0;
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 10px 25px;
+    }
+    &.active 
+    {
+        border: 0;
+        border-bottom: 3px solid $primary-color;
+    }
+
+}

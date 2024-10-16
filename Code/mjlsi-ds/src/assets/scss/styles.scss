@@ -1,0 +1,148 @@
+/* You can add global styles to this file, and also import other style files */
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "./theme";
+@import "./mixins";
+@import "./general/base";
+@import "./general/buttons";
+@import "./general/forms";
+@import "./general/modals";
+@import "./general/font";
+// Custom scss
+@import "./custom/portlet";
+@import "./custom/tabs";
+@import "./custom/wizard";
+@import "./custom/accordion";
+@import "./custom/typeahead";
+@import "./custom/login";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+body{
+	direction:rtl;
+	text-align: right;
+}
+span.delete-btn i {
+    font-size: 30px!important;
+    float: left!important;
+}
+.min-action-bar{
+	box-shadow: 0px 1px 15px 1px rgba(69,65,78,0.1);
+}
+.bg-grey{
+	min-height: 100vh;
+	background: #EEEEF0;
+  }
+  .navbar-light.min-action-bar .navbar-nav .nav-link i{
+  color:#666666;
+  font-size: 20px;
+  padding: 0 7px;
+  cursor: pointer;
+  }
+  .min-action-bar .btn{
+	min-width:140px;
+  }
+  .meeting-minutes-con{
+	padding-top: 100px;
+	
+  }
+  .pdf-wrapper{
+	border-radius: 15px;
+	box-shadow:0px 1px 6px 0px rgba(0, 0, 0, 0.16);
+	position: relative;
+	margin-bottom: 15px;
+  }
+  .pdf-wrapper .text-secondary{
+	color:#919191!important;
+
+  }
+
+  .signature-btns{
+	min-width: 37.5%;
+	display: flex;
+    justify-content: space-around;
+
+  }
+.sign-img{
+	max-width: 35%;
+}
+  .signature-btns .btn{
+	min-width: 45%;
+  }
+  .btn {
+	font-weight: 500;
+	letter-spacing: .3px;
+	font-size: 14px;
+	min-width: 80px;
+	line-height: 35px;
+	margin: 0 0 0 4px;
+	padding: 0 5px 0 10px;
+	border-radius: 6px;
+  }
+  .btn-outline-secondary.dark {
+	border-color: #666666;
+	color: #666666;
+  }
+  .signature-card {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+	background: #F2F3F7;
+	position: relative;
+
+}
+  .signature-card:before {
+    content: ' ';
+    position: absolute;
+    width: 93%;
+    height: 0;
+	left: 0;
+	right: 0;
+    bottom: 30px;
+	background: transparent;
+	border-bottom: 2px dashed #AAAAAB;
+	margin:0 auto;
+}
+  .btn-lg{
+	  min-width: 130px;
+  }
+  .signature-modal .modal-header .close {
+    margin: 0;
+}
+.signature-modal .modal .modal-content .modal-header .modal-title {
+    font-size: 1.5rem;
+}
+.modal .modal-content .modal-header {
+    padding: 20px 25px;
+}
+.modal .modal-content .modal-header a {
+    cursor: pointer;
+}
+.modal .modal-content .modal-footer {
+    padding: 20px 25px;
+}
+.m-input {
+	border-radius: 10px;
+}
+@media (max-width:767px){
+	.pdf-wrapper h4{
+		font-size:14px;
+	}
+	.signature-btns .btn{
+		font-size: 12px;
+		line-height: 22px;
+		min-width: 40%;
+	  }
+	  .signature-btns .btn i {
+		font-size: 12px;
+	  }
+	  .min-action-bar{
+		  padding-top:0;
+		  padding-bottom:0;
+	  }
+	  .min-action-bar .btn {
+		min-width: 60px;
+	}
+	.meeting-minutes-con {
+		padding-top: 110px;
+	}
+}

@@ -1,0 +1,151 @@
+
+
+<style>
+	.temp-wrapper {
+		background: #ffffff;
+		padding: 20px;
+	}
+
+	.temp-wrapper h3 {
+		margin: 20px 0;
+		font-weight: 500;
+	}
+
+	.signature-con {
+		min-height: 140px;
+		background: #F9F9F9;
+		border-radius: 10px;
+		padding: 20px;
+		width: 47%;
+		margin: 10px;
+	}
+
+	.signature-con p {
+		font-size: 15px;
+		font-weight: 400;
+	}
+
+	.signature-con h4 {
+		font-size: 16px;
+	}
+
+	.temp-con {
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+
+	.light-card {
+		background: #ffffff;
+		border-radius: 10px;
+		height: 60px;
+	}
+
+	.mb-15 {
+		margin-bottom: 15px;
+	}
+
+	p.paging {
+		text-align: center;
+		padding-top: 20px;
+		border-top: solid 2px #F5851F;
+	}
+
+	.full-h {
+		min-height: 800px;
+	}
+</style>
+
+
+<div class="bg-grey">
+	<!-- <m-action-bar></m-action-bar> -->
+	<nav class="navbar navbar-expand-md navbar-light flex-wrap bg-white bd-navbar fixed-top min-action-bar">
+		<div class="col-lg col-md-2 col-3 justify-content-between d-flex navbar-main-col my-1 order-1">
+				<!-- <img src="assets/img/logo_large.png" width="50" height="50" class="d-inline-block align-top" alt=""> -->
+				<img src="assets/img/{{themeName}}-Logo.png" width="50" height="50" class="d-inline-block align-top" alt="">
+			
+		</div>
+		<div class="tools-navbar col-9 col-md-5 col-lg  mx-auto my-1 order-3 order-md-2">
+	
+	
+			<div class="col-lg-10  p-0 text-center justify-content-center m-auto">
+				<ul class="navbar-nav flex-row p-0   justify-content-center">
+	
+	
+					<li class="nav-item">
+						<a class="nav-link" role="button" (click)="printDocument()">
+							<i class="fa fa-print"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" role="button" (click)="saveDocument()">
+							<i class="fa fa-download"></i>
+						</a>
+					</li>
+					<li class="nav-item" (click)="zoomInSlide()">
+	
+						<a class="nav-link" role="button">
+							<i class="fa fa-search-plus"></i>
+						</a>
+	
+					</li>
+					<li class="nav-item" (click)="zoomOutSlide()">
+	
+						<a class="nav-link" role="button">
+							<i class="fa fa-search-minus"></i>
+						</a>
+	
+					</li>
+					<li class="nav-item" (click)="fullScreen()">
+	
+						<a class="nav-link" role="button">
+							<i class="fa " [ngClass]="{'fa-expand':!collapsed , 'fa-compress': collapsed}"></i>
+						</a>
+	
+	
+					</li>
+	
+	
+	
+				</ul>
+			</div>
+		</div>
+	
+		<div class="col-lg col-6 order-md-3 order-2  justify-content-end col-md-5 d-flex my-1">
+			<button class="btn btn-outline-secondary dark" (click)="discardAndExit()">
+				<span class="d-none d-md-inline-block">{{'BUTTONS.CANCEL_AND_BACK' | translate}}</span>
+				<i class="la la-times"></i>
+			</button>
+			<button class="btn btn-primary" (click)="saveAndExit()">
+			<span class="d-none d-md-inline-block" >{{'BUTTONS.SAVE_AND_BACK' | translate}}</span>
+			
+				<i class="la la-arrow-left"></i>
+			</button>
+	
+	
+		</div>
+	
+	
+	</nav>
+	<div class=" col-12">
+		<div class=" m-auto meeting-minutes-con px-0"   [style.width.%]="slideWidth" >
+
+			<div class="pdf-wrapper w-100" *ngFor="let documentPage of documentPages ;let i = index" >
+				<img class="w-100" [src]="imageBaseUrl+documentPage.DocumentPageUrl" id="page_{{i}}">
+				<div *ngFor="let documentPageField of documentPage.DocumentFields ;let j = index" >
+			
+				<ng-template dynamic-template
+             [template]="documentPageField.DocumentFieldHtml">
+			</ng-template>
+			<button id="{{'signatureButton_'+documentPageField.DocumentFieldID}}"  [hidden]="true"  (click)="open(documentPageField)"></button>
+     		<button id="{{'rejectButton_'+documentPageField.DocumentFieldID}}"  [hidden]="true"  (click)="openComment(documentPageField)"></button>
+			</div>
+			</div>
+			
+
+		</div>
+
+	</div>
+
+</div>
+

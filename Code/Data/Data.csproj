@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Configurations>Debug;Release;mjlsi;mjlsi-test;tadqiq;tadqiq-test</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200105124326_AddNotificationSettingsTable.cs" />
+    <Compile Remove="Migrations\20200105124326_AddNotificationSettingsTable.Designer.cs" />
+    <Compile Remove="Migrations\20200105124424_AddNotificationSettingsTable.cs" />
+    <Compile Remove="Migrations\20200105124424_AddNotificationSettingsTable.Designer.cs" />
+    <Compile Remove="Migrations\20200105154046_AddNotificationSettingsTable.cs" />
+    <Compile Remove="Migrations\20200105154046_AddNotificationSettingsTable.Designer.cs" />
+    <Compile Remove="Migrations\20200122160542_remove-document-fields-list-from-document-table.cs" />
+    <Compile Remove="Migrations\20200122160542_remove-document-fields-list-from-document-table.Designer.cs" />
+    <Compile Remove="Migrations\20200901092450_two-factor-authentication.cs" />
+    <Compile Remove="Migrations\20200901092450_two-factor-authentication.Designer.cs" />
+    <Compile Remove="Migrations\20200901093105_two-factor-authentication.cs" />
+    <Compile Remove="Migrations\20200901093105_two-factor-authentication.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="3.4.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.0-beta.2" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data.Configuration\Data.Configuration.csproj" />
+    <ProjectReference Include="..\Models\Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,35 @@
+@import "../theme";
+@import "../mixins";
+h1.h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
+}
+p {
+	margin-bottom: 0.5rem;
+}
+textarea {
+	resize: none;
+}
+.font-black{
+	font-weight: 700;
+}
+.font-24 
+{
+	font-size: 1.5rem !important;
+	font-weight: 600;
+}
+.mat-radio-button.mat-accent .mat-radio-inner-circle
+{
+	background-color: $primary-color;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle
+{
+	border-color: $primary-color;
+}
+.font-16
+{
+	font-size: 16px !important;
+}

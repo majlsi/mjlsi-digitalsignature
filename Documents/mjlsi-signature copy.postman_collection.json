@@ -1,0 +1,2119 @@
+{
+	"info": {
+		"_postman_id": "9abe6b2c-f532-465e-9e5c-9fdf7f83e8f9",
+		"name": "mjlsi-signature copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Action Types",
+			"item": [
+				{
+					"name": "get all action types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"SortDirection\": \"ASC\",\r\n    \"SearchObject\": {\r\n   \r\n        \"location_long\": 29.95923197606562,\r\n        \"restaurant_type_id\": [\r\n            1,\r\n            3\r\n        ],\r\n        \"location_lat\": 31.239376518592913\r\n    },\r\n    \"PageSize\": 10,\r\n    \"PageNumber\": 1,\r\n    \"SortBy\": \"recommended_priority\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/actiontypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"actiontypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get action type by id ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"ActionTypeID\": 1,\r\n        \"ActionTypeName\": \"Viewed\",\r\n        \"CreatedBy\": 0,\r\n        \"ModifiedBy\": 0\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/actiontypes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"actiontypes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit action type",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"ActionTypeID\": 1,\r\n        \"ActionTypeName\": \"Viewed\"\r\n     \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/actiontypes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"actiontypes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " create action types",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"ActionTypeID\": 3,\r\n        \"ActionTypeName\": \"Viewed\"\r\n     \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/actiontypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"actiontypes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Field Types",
+			"item": [
+				{
+					"name": "get all field types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"ActionTypeID\": 1,\r\n        \"ActionTypeName\": \"Viewed\",\r\n        \"CreatedBy\": 0,\r\n        \"ModifiedBy\": 0\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/fieldtypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"fieldtypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get field type by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"ActionTypeID\": 1,\r\n        \"ActionTypeName\": \"Viewed\",\r\n        \"CreatedBy\": 0,\r\n        \"ModifiedBy\": 0\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/fieldtypes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"fieldtypes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit field type",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"FieldTypeID\": 1,\r\n        \"FieldTypeName\": \"Signature\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/fieldtypes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"fieldtypes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete field type",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"FieldTypeID\": 1,\r\n        \"FieldTypeName\": \"Signature\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/fieldtypes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"fieldtypes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add field type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"FieldTypeID\": 1,\r\n        \"FieldTypeName\": \"Signature\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/fieldtypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"fieldtypes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Documents",
+			"item": [
+				{
+					"name": "add document",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjEiLCJVc2VySWQiOiIxIiwibmJmIjoxNTc5NDMyOTM4LCJleHAiOjE1ODQ2MTY5MzgsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.Awe8ZuOPQFTm0AR5DbAa3KXU6DJobeB6JR3D2y6YALo",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n          \"OriginalDocumentUrl\":\"Uploads\\\\sama-2pages.pdf\",\r\n     \r\n          \"DocumentUserEmails\":[\"admin@admin.com\"],\r\n          \"DocumentFields\":[\r\n          \t{\"FieldTypeID\":1\r\n          \t\t\r\n          \t},{\"FieldTypeID\":2\r\n          \t\t\r\n          \t}\r\n          \t]\r\n          \r\n          \r\n} "
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all documents",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"OriginalDocumentUrl\":\"dd/ddddd/sdsd\",\r\n        \"ApplicatonID\":1\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit document",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"DocumentID\": 1,\r\n\"OriginalDocumentUrl\":\"dd/ddddd/sdsd\",\r\n        \"ApplicatonID\":1\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documents/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documents",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get document by id ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"DocumentID\": 1,\r\n\"OriginalDocumentUrl\":\"dd/ddddd/sdsd\",\r\n        \"ApplicatonID\":1\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documents/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documents",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete document",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"DocumentID\": 1,\r\n\"OriginalDocumentUrl\":\"dd/ddddd/sdsd\",\r\n        \"ApplicatonID\":1\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documents/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documents",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get document pages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"DocumentID\": 1,\r\n\"OriginalDocumentUrl\":\"dd/ddddd/sdsd\",\r\n        \"ApplicatonID\":1\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documents/documentPages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documents",
+								"documentPages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add document From Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n          \"OriginalDocumentUrl\":\"Uploads\\\\sama-2pages.pdf\",\r\n     \"DocumentPrefix\" : \"20211024172856275_20211024152856240_signature\",\r\n          \"DocumentUserEmails\":[\"admin@admin.com\"],\r\n          \"DocumentFields\":[\r\n          \t{\"FieldTypeID\":1\r\n          \t\t\r\n          \t},{\"FieldTypeID\":2\r\n          \t\t\r\n          \t}\r\n          \t]\r\n          \r\n          \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documentFromImage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documentFromImage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Document Fields",
+			"item": [
+				{
+					"name": "add document field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjEiLCJuYmYiOjE1ODA4MTA3NjUsImV4cCI6MTU4NTk5NDc2NSwiaXNzIjoiZW5vem9tIiwiYXVkIjoiZW5vem9tIn0.QsW_gt2e2n8UviolfMD8Wz48U3CCOtovAiU9_LDR4BU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"DocumentPageID\":5,\r\n        \"FieldTypeID\":1,\r\n      \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documentfields",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documentfields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit document field",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DocumentFieldID\":2,\r\n        \"DocumentID\":2,\r\n        \"FieldTypeID\":1,\r\n        \"DocumentFieldValue\":\"true\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documentfields/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documentfields",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all document fields",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DocumentFieldID\":2,\r\n        \"DocumentID\":2,\r\n        \"FieldTypeID\":1,\r\n        \"DocumentFieldValue\":\"true\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documentfields",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documentfields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete document field",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DocumentFieldID\":2,\r\n        \"DocumentID\":2,\r\n        \"FieldTypeID\":1,\r\n        \"DocumentFieldValue\":\"true\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documentfields/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documentfields",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Document Users",
+			"item": [
+				{
+					"name": "get all DocumentUsers ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"DocumentID\":2,\r\n        \"UserID\":1\r\n  }"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/DocumentUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"DocumentUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Document User by id ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"DocumentID\":2,\r\n        \"UserID\":1\r\n  }"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/DocumentUsers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"DocumentUsers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Document User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"DocumentID\":2,\r\n        \"UserID\":1\r\n  }"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/DocumentUsers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"DocumentUsers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addDocument User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"UserID\":1,\n\n\"DocumentID\":2\n\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/DocumentUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"DocumentUsers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Applications",
+			"item": [
+				{
+					"name": "get all Applications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/Applications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"Applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get application by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/Applications/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"Applications",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit application ",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ApplicationEmail\":\"sama@gmail.com\",\n\"ApplicationID\": 1}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/Applications/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"Applications",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete application",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ApplicationEmail\":\"sama@gmail.com\",\n\"ApplicationID\": 1}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/Applications/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"Applications",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add Applications",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjEiLCJuYmYiOjE1ODA2NjE1NjMsImV4cCI6MTU4NTg0NTU2MywiaXNzIjoiZW5vem9tIiwiYXVkIjoiZW5vem9tIn0.Ns-W2XF_Tm8DSVu5_f5clEbLX1k-zaswE8_ahrmMocY",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ApplicationEmail\":\"mjlsi@gmail.com\",\n\t\"ApplicationName\" :\"mjlsi\",\n\t\"ApplicationPassword\" :\"123\",\n\t\"TimeZoneDifference\" : 3\n\t\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/Applications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"Applications"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Document User Actions",
+			"item": [
+				{
+					"name": "get DocumentUserActions by id ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"UserID\":1,\n\"ActionTypeID\":1,\n\"DocumentID\":2}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/DocumentUserActions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"DocumentUserActions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit Documen tUser Action",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"UserID\":1,\n\"ActionTypeID\":1,\n\"DocumentID\":2,\n\"DocumentUserActionID\":1\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/DocumentUserActions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"DocumentUserActions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all Document User Actions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"UserID\":1,\n\"ActionTypeID\":1,\n\"DocumentID\":2,\n\"DocumentUserActionID\":1\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/DocumentUserActions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"DocumentUserActions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Document User Action",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"UserID\":1,\n\"ActionTypeID\":1,\n\"DocumentID\":2,\n\"DocumentUserActionID\":1\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/DocumentUserActions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"DocumentUserActions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add Document User Action",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"UserID\":1,\n\"ActionTypeID\":1,\n\"DocumentID\":2\n\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/DocumentUserActions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"DocumentUserActions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Application Login",
+			"item": [
+				{
+					"name": "login application",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"ApplicationEmail\":\"ahmed@ahmed.com\",\r\n        \"ApplicationPassword\": \"123\"\r\n       \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User ",
+			"item": [
+				{
+					"name": "user login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjEiLCJSZXR1cm5VUkwiOiJsb2NhbGhvc3QiLCJDYWxsYmFja1VSTCI6ImxvY2FsaG9zdCIsIm5iZiI6MTU5ODk3MDYzOCwiZXhwIjoxNjA0MTU0NjM4LCJpc3MiOiJlbm96b20iLCJhdWQiOiJlbm96b20ifQ.8XjRnpJY4BHKUE7jt6oaCUeva4LHObrtTAOxoG5oJq0"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"UserName\":\"ahmed.elkallaf\",\n\"DocumentID\":1\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/users/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"users",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjEiLCJSZXR1cm5VUkwiOiJyZXR1cm5VUkwiLCJDYWxsYmFja1VSTCI6ImNhbGxCYWNrVVJMIiwibmJmIjoxNjAwNjEzNTY5LCJleHAiOjE2MDU3OTc1NjksImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.M8CTshBLcVDfjXseBM49ADDIYiZWXuid0iU9Hg8Wq6M",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"FullName\":\"ahmed mohamed elkalaf\",\n\t\"UserName\" :\"ahmed.elkallaf\",\n    \"UserPhoneNumber\":\"+201013245963\",\n\t\"UserEmail\" :\"ahmed.elkalaf@enozom.com\",\n\t\"UserPassword\" :\"123\"\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/Users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"Users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "add document steps",
+			"item": [
+				{
+					"name": "1-add Applications",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjEiLCJuYmYiOjE1ODA2NjE1NjMsImV4cCI6MTU4NTg0NTU2MywiaXNzIjoiZW5vem9tIiwiYXVkIjoiZW5vem9tIn0.Ns-W2XF_Tm8DSVu5_f5clEbLX1k-zaswE8_ahrmMocY",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ApplicationEmail\":\"mjlsi@gmail.com\",\n\t\"ApplicationName\" :\"mjlsi\",\n\t\"ApplicationPassword\" :\"123\",\n\t\"TimeZoneDifference\" : 3\n\t\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/Applications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"Applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2-login application",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"ApplicationEmail\":\"sama@gmail.com\",\r\n        \"ApplicationPassword\": \"123\"\r\n       \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3-add document",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjEiLCJSZXR1cm5VUkwiOiJyZXR1cm5VUkwiLCJDYWxsYmFja1VSTCI6ImNhbGxCYWNrVVJMIiwibmJmIjoxNjAwNTk0ODg5LCJleHAiOjE2MDU3Nzg4ODksImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.dYW29-_oOmDLNC5N7MYcjYwFEPpL7SegkZDXVvRc5L0"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n          \"OriginalDocumentUrl\":\"uploads/20200219000328183_1582070608_signature.pdf\",\r\n     \r\n\r\n        \"DocumentFields\":[\r\n          \t{\"FieldTypeID\":1,\r\n             \"XPosition\":0,\r\n           \t\"YPosition\":18,\r\n          \t\"DocumentFieldUserEmail\":\"ahmed.elkalaf@enozom.com\",\r\n          \t\"DocumentFieldUserPhoneNumber\":\"00201013245963\",\r\n          \t\"PageNumber\":2\r\n          \t\r\n          \t\t\r\n          \t},\r\n          \t{\"FieldTypeID\":1,\r\n             \"XPosition\":0,\r\n           \t\"YPosition\":34,\r\n          \t\"DocumentFieldUserEmail\":\"ahmed.elkalaf@enozom.com\",\r\n          \t\"DocumentFieldUserPhoneNumber\":\"00201013245963\",\r\n          \t \"PageNumber\":2\r\n          \t}\r\n          \t]\r\n          \r\n          \r\n} "
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit document field (if needed)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlSWQiOiIxIiwiVXNlcklkIjoiMSIsIkNvbXBhbnlJZCI6Ijc3IiwibmJmIjoxNTc5MDc5ODg3LCJleHAiOjE1ODQyNjM4ODcsImlzcyI6ImVub3pvbSIsImF1ZCI6ImVub3pvbSJ9.1QTK1DLm9OWmJ-X29zU5MmQ_BMqf2xQN1-I_Ho6XWZ0"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DocumentFieldID\":2,\r\n      \"FieldTypeID\":2,\r\n          \t\"DocumentPageID\":5,\r\n          \t\"XPosition\":0,\r\n           \t\"YPosition\":18,\r\n           \t\"UserID\":1\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documentfields/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documentfields",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update  document (if needed)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjEiLCJuYmYiOjE1ODA2NjMyNDgsImV4cCI6MTU4NTg0NzI0OCwiaXNzIjoiZW5vem9tIiwiYXVkIjoiZW5vem9tIn0.xSU_h9Ldjrc8oJ0gRNIvwRSu7NGU94IhIIHMvwoOpvE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n          \"OriginalDocumentUrl\":\"Uploads\\\\sama-2022.pdf\",\r\n          \"DocumentID\":7 ,\r\n          \"DocumentUserEmails\":[\"admin@admin.com\"],\r\n          \"DocumentFields\":[\r\n          \t{\"FieldTypeID\":1,\r\n          \t\"UserID\":1\r\n          \t\t\r\n          \t},{\"FieldTypeID\":1\r\n          \t\t\r\n          \t}\r\n          \t]\r\n          \r\n          \r\n} "
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documents/updateDocument",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documents",
+								"updateDocument"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User  sign steps",
+			"item": [
+				{
+					"name": "1-login application",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ApplicationEmail\":\"mjlsi@gmail.com\",\r\n    \"ApplicationPassword\": \"123\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2-user login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjMiLCJSZXR1cm5VUkwiOiJodHRwOi8vMTM0LjEyMi44Ny4yNTEvYXBwIiwiQ2FsbGJhY2tVUkwiOiJodHRwOi8vMTM0LjEyMi44Ny4yNTEvYXBwL0JhY2tFbmQvcHVibGljL2FwaS92MS9tZWV0aW5ncy9zaWduLW1vbS1jYWxsYmFjayIsIm5iZiI6MTYwMDc2MzA3OCwiZXhwIjoxNjA1OTQ3MDc4LCJpc3MiOiJlbm96b20iLCJhdWQiOiJlbm96b20ifQ.az_IEXaGyoAi_fJkdiP7Bk75kTFB2YruO8Vt2oYgjsE"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"UserName\":\"eman.mohamed@enozom.com\",\n\"DocumentID\":8\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/users/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"users",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3-get document pages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjEiLCJVc2VySWQiOiIxIiwiRG9jdW1lbnRJZCI6IjYiLCJuYmYiOjE1ODA4MDQ3OTYsImV4cCI6MTU4NTk4ODc5NiwiaXNzIjoiZW5vem9tIiwiYXVkIjoiZW5vem9tIn0.dvS7FWQgbsvRtVnt_q0sk_cXr0CSbMqMZZ_dCqVfKUk"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documents/documentPages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documents",
+								"documentPages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4-sign",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"DocumentFieldValue\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAACWCAYAAADwkd5lAAATEUlEQVR4Xu2dech9RRnHv/4tkoG\",\r\n\"DocumentFieldComment\":\"i accept because bla bla bla\",\r\n\"SignatureTypeID\": 2\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documentfields/sign/68",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documentfields",
+								"sign",
+								"68"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5-reject",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save And Sign",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjIiLCJVc2VySWQiOiIzIiwiRG9jdW1lbnRJZCI6IjEiLCJSZXR1cm5VUkwiOiJodHRwOi8vbG9jYWxob3N0OjUwMDkiLCJDYWxsYmFja1VSTCI6Imh0dHA6Ly9sb2NhbGhvc3QvbWpsc2kvQ29kZS9CYWNrRW5kL3B1YmxpYy9hcGkvdjEvbWVldGluZ3Mvc2lnbi1tb20tY2FsbGJhY2siLCJVc2VyRW1haWwiOiJlbWFuLm1vaGFtZWRAZW5vem9tLmNvbSIsIm5iZiI6MTYwMTg5MTE1NywiZXhwIjoxNjA3MDc1MTU3LCJpc3MiOiJlbm96b20iLCJhdWQiOiJlbm96b20ifQ.7ufE3gbTHJN7EjTMs4fEFqGILC2v1ClvmkyRkueFRDI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DocumentFieldValue\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAACWCAYAAADwkd5lAAATEUlEQVR4Xu2dech9RRnHv/4tkoG\",\r\n    \"DocumentFieldComment\":\"i accept because bla bla blaaaaaaa\",\r\n    \"SignatureTypeID\": 2}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/documentfields/SaveAndSign/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"documentfields",
+								"SaveAndSign",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get pdf  steps",
+			"item": [
+				{
+					"name": "get document pdf path  ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjEiLCJuYmYiOjE1ODA2NjMyNDgsImV4cCI6MTU4NTg0NzI0OCwiaXNzIjoiZW5vem9tIiwiYXVkIjoiZW5vem9tIn0.xSU_h9Ldjrc8oJ0gRNIvwRSu7NGU94IhIIHMvwoOpvE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/documents/documentPdf/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"documents",
+								"documentPdf",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Document Signature Code",
+			"item": [
+				{
+					"name": "Generate Code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjMiLCJVc2VySWQiOiIxNyIsIkRvY3VtZW50SWQiOiI4IiwiUmV0dXJuVVJMIjoiaHR0cDovLzEzNC4xMjIuODcuMjUxL2FwcCIsIkNhbGxiYWNrVVJMIjoiaHR0cDovLzEzNC4xMjIuODcuMjUxL2FwcC9CYWNrRW5kL3B1YmxpYy9hcGkvdjEvbWVldGluZ3Mvc2lnbi1tb20tY2FsbGJhY2siLCJVc2VyRW1haWwiOiJlbWFuLm1vaGFtZWRAZW5vem9tLmNvbSIsIm5iZiI6MTYwMDc2MzcwNywiZXhwIjoxNjA1OTQ3NzA3LCJpc3MiOiJlbm96b20iLCJhdWQiOiJlbm96b20ifQ._-1x1sm22QLfBLuZwCv72L0aNimuARm0ppdK_qhOP54",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"SendEmail\":true,\r\n    \"SendSms\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/DocumentSignatureCodes/ar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"DocumentSignatureCodes",
+								"ar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerifyCode",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjMiLCJVc2VySWQiOiIxNyIsIkRvY3VtZW50SWQiOiIxIiwiUmV0dXJuVVJMIjoiaHR0cDovLzEzNC4xMjIuODcuMjUxL2FwcCIsIkNhbGxiYWNrVVJMIjoiaHR0cDovLzEzNC4xMjIuODcuMjUxL2FwcC9CYWNrRW5kL3B1YmxpYy9hcGkvdjEvbWVldGluZ3Mvc2lnbi1tb20tY2FsbGJhY2siLCJVc2VyRW1haWwiOiJlbWFuLm1vaGFtZWRAZW5vem9tLmNvbSIsIm5iZiI6MTYwMDc2MzE3NiwiZXhwIjoxNjA1OTQ3MTc2LCJpc3MiOiJlbm96b20iLCJhdWQiOiJlbm96b20ifQ.rG6e1_2ZrN6EtaRO-ZcOEhJJexWSyAl4T5FyAAAuK4A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"VerificationCode\":\"6b7v\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/webapi/api/DocumentSignatureCodes/VerifyCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"webapi",
+								"api",
+								"DocumentSignatureCodes",
+								"VerifyCode"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Signature Types",
+			"item": [
+				{
+					"name": "get all Signature Types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJZCI6IjIiLCJVc2VySWQiOiIzIiwiRG9jdW1lbnRJZCI6IjEiLCJSZXR1cm5VUkwiOiJodHRwOi8vbG9jYWxob3N0OjUwMDkiLCJDYWxsYmFja1VSTCI6Imh0dHA6Ly9sb2NhbGhvc3QvbWpsc2kvQ29kZS9CYWNrRW5kL3B1YmxpYy9hcGkvdjEvbWVldGluZ3Mvc2lnbi1tb20tY2FsbGJhY2siLCJVc2VyRW1haWwiOiJlbWFuLm1vaGFtZWRAZW5vem9tLmNvbSIsIm5iZiI6MTYwMTg5MTE1NywiZXhwIjoxNjA3MDc1MTU3LCJpc3MiOiJlbm96b20iLCJhdWQiOiJlbm96b20ifQ.7ufE3gbTHJN7EjTMs4fEFqGILC2v1ClvmkyRkueFRDI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DocumentFieldValue\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAACWCAYAAADwkd5lAAATEUlEQVR4Xu2dech9RRnHv/4tkoG\",\r\n    \"DocumentFieldComment\":\"i accept because bla bla blaaaaaaa\",\r\n    \"SignatureTypeID\": 2}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/SignatureTypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"SignatureTypes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upload",
+			"item": [
+				{
+					"name": "Upload list of images",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/C:/Users/Eno/Pictures/Saved Pictures/reverse-image-search-your-complete-guide-5ef5f5435f949-1520x800.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/WebAPI/api/Upload/UploadPDFImages/test2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"WebAPI",
+								"api",
+								"Upload",
+								"UploadPDFImages",
+								"test2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get list of s3 files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/WebAPI/api/Upload/upload-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"WebAPI",
+								"api",
+								"Upload",
+								"upload-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/WebAPI/api/Upload/downloads?key=uploads/docs/doc_20211024173133494_20211024153133493_signature/pdf_page_1.jpeg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"WebAPI",
+								"api",
+								"Upload",
+								"downloads"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "uploads/docs/doc_20211024173133494_20211024153133493_signature/pdf_page_1.jpeg"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
